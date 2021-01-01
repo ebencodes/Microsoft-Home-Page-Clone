@@ -62,6 +62,7 @@ ul {
   margin-left: 20px;
 }
 
+/**Hamburger button*/
 .menu-btn {
   cursor: pointer;
   position: absolute;
@@ -103,10 +104,11 @@ ul {
   width: 100%;
   height: 400px;
   background: url("img/slide1.png") no-repeat center center/cover;
+  /*repeat-property x-position, y-position/size-fills the entire space*/
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center;
   padding-bottom: 50px;
   margin-bottom: 20px;
@@ -126,8 +128,12 @@ section.home-cards {
   display: flex;
 }
 
+section.home-cards div {
+  width: 25%;
+}
 section.home-cards img {
   width: 100%;
+  height: 100px;
 }
 
 section.home-cards :nth-child(1),
@@ -163,6 +169,10 @@ section.home-cards :nth-child(3) {
   padding-top: 10px;
 }
 
+.home-cards a i {
+  transition: all 1s ease-in-out;
+}
+
 .home-cards a:hover i {
   margin-left: 10px;
 }
@@ -171,6 +181,7 @@ section.home-cards :nth-child(3) {
 /**X-box style starts**/
 .x-box {
   background: url("img/xbox.png") no-repeat center center/cover;
+  /*repeat-property x-position, y-position/size-fills the entire space*/
   width: 100%;
   height: 350px;
   display: block;
@@ -297,7 +308,7 @@ section.home-cards :nth-child(3) {
 
   /**Making the menu main-nav responsive (hiding within the hamburger icon)**/
   .main-nav ul.main-menu {
-    display: block;
+    display: block; /**Note that Navs are normallt displayed*/
     position: absolute;
     top: 0;
     left: 0;
@@ -313,7 +324,7 @@ section.home-cards :nth-child(3) {
   }
 
   .main-nav ul.main-menu.show {
-    transform: translateX(-20px);
+    transform: translateX(-20px); /*This pushes it back to it;s initial position*/
   }
 
   .main-nav ul.main-menu li {
